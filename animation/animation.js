@@ -1,4 +1,4 @@
-function move(){
+function moved(){
     const animate = document.getElementById('animate');
     let pos = 0;
 
@@ -13,4 +13,9 @@ function move(){
             clearInterval(interval);
         }
     }
+}
+const button = document.getElementById('move');
+button.addEventListener('click',moved)
+function remove(){
+    document.getElementById('move').removeEventListener('click',moved)
 }
